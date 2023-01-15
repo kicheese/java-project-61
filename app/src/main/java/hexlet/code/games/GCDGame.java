@@ -18,9 +18,11 @@ public class GCDGame {
 
             int result = divider;
 
-            while (firstNumber % divider != 0 || secondNumber % divider != 0) {
-                divider--;
-                result = divider;
+            if (firstNumber != secondNumber) {
+                while (firstNumber % divider != 0 || secondNumber % divider != 0) {
+                    divider--;
+                    result = divider;
+                }
             }
 
             String question = String.format("%s %s", firstNumber, secondNumber);
