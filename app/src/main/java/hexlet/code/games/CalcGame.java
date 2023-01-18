@@ -24,11 +24,11 @@ public class CalcGame {
         System.out.println("What is the result of the expression?");
 
         for (int i = 0; i < Engine.getRoundCount(); i++) {
-            final int  start = 1;
-            final int  end = 50;
+            final int startRandoms = 1;
+            final int endRandoms = 50;
 
-            int firstNumber = Engine.getRandomNumber(start, end);
-            int secondNumber = Engine.getRandomNumber(start, end);
+            int firstNumber = Engine.getRandomNumber(startRandoms, endRandoms);
+            int secondNumber = Engine.getRandomNumber(startRandoms, endRandoms);
 
             String sign = getRandomSign();
 
