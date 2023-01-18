@@ -20,19 +20,19 @@ public class ProgressionGame {
 
             int correctAnswer = 0;
 
+            StringBuilder result = new StringBuilder();
+
             for (int j = 0; j < progressions.length; j++) {
                 if (j == hideValue) {
-                    progressions[j] = "..";
+                    result.append(".. ");
                     correctAnswer = startValue;
                 } else {
-                    progressions[j] = Integer.toString(startValue);
+                    result.append(startValue).append(" ");
                 }
                 startValue += step;
             }
 
-            String question = Arrays.toString(progressions);
-
-            Engine.showQuestion(question.substring(1, question.length() - 1));
+            Engine.showQuestion(String.valueOf(result).trim());
 
             String answer = scanner.next();
             Engine.showAnswer(answer);
