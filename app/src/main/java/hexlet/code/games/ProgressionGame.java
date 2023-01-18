@@ -13,14 +13,14 @@ public class ProgressionGame {
         for (int i = 0; i < Engine.getRoundCount(); i++) {
             String[] progressions = new String[10];
 
-            var stepStart = 1;
-            var stepEnd = 5;
+            final int  stepStart = 1;
+            final int  stepEnd = 5;
 
-            var startValueStart = 1;
-            var startValueEnd = 20;
+            final int  startValueStart = 1;
+            final int  startValueEnd = 20;
 
-            var hideValueStart = 0;
-            var hideValueEnd = 9;
+            final int  hideValueStart = 0;
+            final int  hideValueEnd = 9;
 
             int step = Engine.getRandomNumber(stepStart, stepEnd);
             int startValue = Engine.getRandomNumber(startValueStart, startValueEnd);

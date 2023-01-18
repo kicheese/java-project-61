@@ -24,8 +24,8 @@ public class CalcGame {
         System.out.println("What is the result of the expression?");
 
         for (int i = 0; i < Engine.getRoundCount(); i++) {
-            var start = 1;
-            var end = 50;
+            final int  start = 1;
+            final int  end = 50;
 
             int firstNumber = Engine.getRandomNumber(start, end);
             int secondNumber = Engine.getRandomNumber(start, end);

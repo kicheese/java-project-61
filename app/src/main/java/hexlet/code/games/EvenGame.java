@@ -10,8 +10,8 @@ public class EvenGame {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         for (int i = 0; i < Engine.getRoundCount(); i++) {
-            var start = 1;
-            var end = 50;
+            final int  start = 1;
+            final int  end = 50;
 
             int randomNumber =  Engine.getRandomNumber(start, end);
 
