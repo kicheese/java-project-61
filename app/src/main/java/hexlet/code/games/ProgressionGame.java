@@ -32,7 +32,7 @@ public class ProgressionGame {
 
             String question = Arrays.toString(progressions);
 
-            Engine.showQuestion(question.substring(2, question.length() - 1));
+            Engine.showQuestion(question.substring(1, question.length() - 1));
 
             String answer = scanner.next();
             Engine.showAnswer(answer);
