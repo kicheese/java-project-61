@@ -10,8 +10,11 @@ public class PrimeGame {
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-        for (int i = 0; i < Engine.roundCount; i++) {
-            int randomNumber = Engine.getRandomNumber(1, 20);
+        for (int i = 0; i < Engine.getRoundCount(); i++) {
+            int start = 1;
+            int end = 20;
+
+            int randomNumber = Engine.getRandomNumber(start, end);
 
             boolean isSimpleNumber = true;
 

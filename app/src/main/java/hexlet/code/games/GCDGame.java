@@ -10,9 +10,12 @@ public class GCDGame {
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        for (int i = 0; i < Engine.roundCount; i++) {
-            int firstNumber = Engine.getRandomNumber(1, 20);
-            int secondNumber = Engine.getRandomNumber(1, 20);
+        for (int i = 0; i < Engine.getRoundCount(); i++) {
+            int start = 1;
+            int end = 20;
+
+            int firstNumber = Engine.getRandomNumber(start, end);
+            int secondNumber = Engine.getRandomNumber(start, end);
 
             int divider = Math.min(firstNumber, secondNumber);
 

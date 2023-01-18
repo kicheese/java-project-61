@@ -6,7 +6,10 @@ import java.util.Scanner;
 
 public class CalcGame {
     private static String getRandomSign() {
-        int random = Engine.getRandomNumber(1, 3);
+        int randomNumberStart = 1;
+        int randomNumberEnd = 3;
+
+        int random = Engine.getRandomNumber(randomNumberStart, randomNumberEnd);
 
         switch (random) {
             case 1: return "*";
@@ -20,9 +23,12 @@ public class CalcGame {
 
         System.out.println("What is the result of the expression?");
 
-        for (int i = 0; i < Engine.roundCount; i++) {
-            int firstNumber = Engine.getRandomNumber(1, 50);
-            int secondNumber = Engine.getRandomNumber(1, 50);
+        for (int i = 0; i < Engine.getRoundCount(); i++) {
+            int start = 1;
+            int end = 50;
+
+            int firstNumber = Engine.getRandomNumber(start, end);
+            int secondNumber = Engine.getRandomNumber(start, end);
 
             String sign = getRandomSign();
 

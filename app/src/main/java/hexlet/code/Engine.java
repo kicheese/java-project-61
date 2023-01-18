@@ -1,7 +1,7 @@
 package hexlet.code;
 
 public class Engine {
-    public static int roundCount = 3;
+    private static final int ROUND_COUNT = 3;
 
     public static int getRandomNumber(int min,  int max) {
         return   (int) Math.floor(Math.random() * (max - min + 1) + min);
@@ -26,6 +26,10 @@ public class Engine {
 
             return true;
         }
+    }
+
+    public static int getRoundCount() {
+        return ROUND_COUNT;
     }
 
     public static void showCongratulations(String userName) {

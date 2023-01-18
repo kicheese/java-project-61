@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ProgressionGame {
@@ -11,12 +10,21 @@ public class ProgressionGame {
 
         System.out.println("What number is missing in the progression?");
 
-        for (int i = 0; i < Engine.roundCount; i++) {
+        for (int i = 0; i < Engine.getRoundCount(); i++) {
             String[] progressions = new String[10];
 
-            int step = Engine.getRandomNumber(1, 5);
-            int startValue = Engine.getRandomNumber(1, 20);
-            int hideValue = Engine.getRandomNumber(0, 9);
+            int stepStart = 1;
+            int stepEnd = 5;
+
+            int startValueStart = 1;
+            int startValueEnd = 20;
+
+            int hideValueStart = 0;
+            int hideValueEnd = 9;
+
+            int step = Engine.getRandomNumber(stepStart, stepEnd);
+            int startValue = Engine.getRandomNumber(startValueStart, startValueEnd);
+            int hideValue = Engine.getRandomNumber(hideValueStart, hideValueEnd);
 
             int correctAnswer = 0;
 

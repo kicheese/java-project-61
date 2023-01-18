@@ -25,22 +25,29 @@ public class App {
 
         System.out.println("Your choice: " + currentGame);
 
-        if (currentGame == 0) {
+        final int gamesNumberNull = 0;
+        final int gamesNumberTwo = 2;
+        final int gamesNumberThree = 3;
+        final int gamesNumberFour = 4;
+        final int gamesNumberFive = 5;
+        final int gamesNumberSix = 6;
+
+        if (currentGame == gamesNumberNull) {
             return;
         }
 
         String userName = Cli.toKnowUserName();
 
         switch (currentGame) {
-            case 2: EvenGame.start(userName);
+            case gamesNumberTwo: EvenGame.start(userName);
             break;
-            case 3: CalcGame.start(userName);
+            case gamesNumberThree: CalcGame.start(userName);
             break;
-            case 4: GCDGame.start(userName);
+            case gamesNumberFour: GCDGame.start(userName);
             break;
-            case 5: ProgressionGame.start(userName);
+            case gamesNumberFive: ProgressionGame.start(userName);
             break;
-            case 6: PrimeGame.start(userName);
+            case gamesNumberSix: PrimeGame.start(userName);
             break;
             default: return;
         }

@@ -9,8 +9,11 @@ public class EvenGame {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        for (int i = 0; i < Engine.roundCount; i++) {
-            int randomNumber =  Engine.getRandomNumber(1, 50);
+        for (int i = 0; i < Engine.getRoundCount(); i++) {
+            int start = 1;
+            int end = 50;
+
+            int randomNumber =  Engine.getRandomNumber(start, end);
 
             Engine.showQuestion(Integer.toString(randomNumber));
             String answer = scanner.next();
