@@ -11,7 +11,8 @@ public class ProgressionGame {
         System.out.println("What number is missing in the progression?");
 
         for (int i = 0; i < Engine.getRoundCount(); i++) {
-            String[] progressions = new String[10];
+            final int progressionLength = 10;
+            String[] progressions = new String[progressionLength];
 
             final int  stepStart = 1;
             final int  stepEnd = 5;

@@ -11,8 +11,8 @@ public class GCDGame {
         System.out.println("Find the greatest common divisor of given numbers.");
 
         for (int i = 0; i < Engine.getRoundCount(); i++) {
-            int start = 1;
-            int end = 20;
+            final int start = 1;
+            final int end = 20;
 
             int firstNumber = Engine.getRandomNumber(start, end);
             int secondNumber = Engine.getRandomNumber(start, end);

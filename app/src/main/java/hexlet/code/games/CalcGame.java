@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class CalcGame {
     private static String getRandomSign() {
-        int randomNumberStart = 1;
-        int randomNumberEnd = 3;
+        final int randomNumberStart = 1;
+        final int randomNumberEnd = 3;
 
         int random = Engine.getRandomNumber(randomNumberStart, randomNumberEnd);
 
